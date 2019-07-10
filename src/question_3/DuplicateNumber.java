@@ -33,10 +33,20 @@ public class DuplicateNumber {
     public int findDuplicateNumber(int[] array) {
         int[] newArray = new int[array.length - 1];
         for (int num : array) {
-            if (newArray[num] == num)
+            if (newArray[num-1] == num)
                 return num;
-            newArray[num] = num;
+            newArray[num-1] = num;
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {4, 3, 2, 2, 5, 0, 6};
+        DuplicateNumber duplicateNumber = new DuplicateNumber();
+        System.out.println("---------- 判断数组中是否存在重复数字 ----------");
+        System.out.println(duplicateNumber.existDuplicateNumber(array));
+        int[] array2 = new int[]{4, 3, 2, 1, 5, 7, 1, 6};
+        System.out.println("---------- 从数组中找到存在的重复数字 ----------");
+        System.out.println(duplicateNumber.findDuplicateNumber(array2));
     }
 }
