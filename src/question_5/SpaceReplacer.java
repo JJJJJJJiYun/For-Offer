@@ -5,7 +5,7 @@ public class SpaceReplacer {
     /**
      * 将字符串中的空格替换为%20
      */
-    public String replaceSpace(String str) {
+    private static String replaceSpace(String str) {
         char[] chars = str.toCharArray();
         int spaceCount = 0;
         for (char c : chars) {
@@ -28,9 +28,9 @@ public class SpaceReplacer {
         return String.valueOf(newChars);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String str = "ljy is a pig";
-        System.out.println(new SpaceReplacer().replaceSpace(str));
+        System.out.println(replaceSpace(str));
     }
 
 }

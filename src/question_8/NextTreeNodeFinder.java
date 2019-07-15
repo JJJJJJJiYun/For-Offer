@@ -4,7 +4,7 @@ import structure.TreeNodeWithFather;
 
 public class NextTreeNodeFinder {
 
-    public TreeNodeWithFather findNextTreeNode(TreeNodeWithFather root) {
+    private static TreeNodeWithFather findNextTreeNode(TreeNodeWithFather root) {
         if (root == null)
             return null;
         // 如果存在右子节点，下一个节点一定是右子节点
@@ -38,7 +38,7 @@ public class NextTreeNodeFinder {
         node2.setRelation(node1, node4, node5);
         node3.setRelation(node1, node6, node7);
         node5.setRelation(node2, node8, node9);
-        TreeNodeWithFather nextNode = new NextTreeNodeFinder().findNextTreeNode(node6);
+        TreeNodeWithFather nextNode = findNextTreeNode(node6);
         System.out.println(nextNode == null ? "无下一个节点" : nextNode.value);
     }
 

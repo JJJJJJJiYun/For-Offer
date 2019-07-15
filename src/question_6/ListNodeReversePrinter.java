@@ -7,18 +7,18 @@ public class ListNodeReversePrinter {
     /**
      * 倒序输出链表
      */
-    public void reversePrintListNode(ListNode head){
+    private static void reversePrintListNode(ListNode head) {
         helper(head);
     }
 
-    private void helper(ListNode head){
+    private static void helper(ListNode head) {
         if (head == null)
             return;
         helper(head.next);
         System.out.println(head.value);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
@@ -28,7 +28,7 @@ public class ListNodeReversePrinter {
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
-        new ListNodeReversePrinter().reversePrintListNode(node1);
+        reversePrintListNode(node1);
     }
 
 }

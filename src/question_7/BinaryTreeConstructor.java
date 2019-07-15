@@ -7,11 +7,11 @@ public class BinaryTreeConstructor {
     /**
      * 从前序和中序遍历结果重建二叉树
      */
-    public TreeNode constructBinaryTree(int[] pre, int[] in) {
+    private static TreeNode constructBinaryTree(int[] pre, int[] in) {
         return helper(pre, 0, pre.length - 1, in, 0, in.length - 1);
     }
 
-    public TreeNode helper(int[] pre, int ps, int pe, int[] in, int is, int ie) {
+    private static TreeNode helper(int[] pre, int ps, int pe, int[] in, int is, int ie) {
         // 递归终点
         if (ps > pe)
             return null;
@@ -33,18 +33,18 @@ public class BinaryTreeConstructor {
     }
 
     // 中序遍历递归打印
-    public static void printTree(TreeNode node){
-        if(node!=null){
+    private static void printTree(TreeNode node) {
+        if (node != null) {
             printTree(node.left);
-            System.out.print(node.value+" ");
+            System.out.print(node.value + " ");
             printTree(node.right);
         }
     }
 
-    public static void main(String[] args){
-        int[] pre={1,2,4,7,3,5,6,8};
-        int[] in={4,7,2,1,5,3,8,6};
-        TreeNode root = new BinaryTreeConstructor().constructBinaryTree(pre,in);
+    public static void main(String[] args) {
+        int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
+        int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
+        TreeNode root = constructBinaryTree(pre, in);
         printTree(root);
     }
 

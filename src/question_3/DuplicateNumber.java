@@ -6,7 +6,7 @@ public class DuplicateNumber {
      * 判断长度为 n 的数组中是否存在重复数字
      * 数组中数字大小为 0 ~ n-1
      */
-    public boolean existDuplicateNumber(int[] array) {
+    private static boolean existDuplicateNumber(int[] array) {
         if (array == null || array.length == 0)
             return false;
         for (int num : array) {
@@ -30,23 +30,22 @@ public class DuplicateNumber {
      * 从长度为 n + 1 的数组中找出重复数字
      * 数组中数字大小为 1 ~ n
      */
-    public int findDuplicateNumber(int[] array) {
+    private static int findDuplicateNumber(int[] array) {
         int[] newArray = new int[array.length - 1];
         for (int num : array) {
-            if (newArray[num-1] == num)
+            if (newArray[num - 1] == num)
                 return num;
-            newArray[num-1] = num;
+            newArray[num - 1] = num;
         }
         return -1;
     }
 
     public static void main(String[] args) {
         int[] array = {4, 3, 2, 2, 5, 0, 6};
-        DuplicateNumber duplicateNumber = new DuplicateNumber();
         System.out.println("---------- 判断数组中是否存在重复数字 ----------");
-        System.out.println(duplicateNumber.existDuplicateNumber(array));
+        System.out.println(existDuplicateNumber(array));
         int[] array2 = new int[]{4, 3, 2, 1, 5, 7, 1, 6};
         System.out.println("---------- 从数组中找到存在的重复数字 ----------");
-        System.out.println(duplicateNumber.findDuplicateNumber(array2));
+        System.out.println(findDuplicateNumber(array2));
     }
 }
