@@ -2,6 +2,9 @@ package question_13;
 
 public class MovingRobot {
 
+    /**
+     * 找到矩阵中坐标按位取和小于预设值的最长路径
+     */
     private static int countReachableCube(int rows, int cols, int limit) {
         if (limit < 0) return 0;
         boolean[][] array = new boolean[rows][cols];

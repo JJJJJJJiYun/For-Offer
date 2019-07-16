@@ -2,6 +2,9 @@ package question_9;
 
 import java.util.Stack;
 
+/**
+ * 用两个栈实现一个队列
+ */
 public class QueueByTwoStacks {
 
     private Stack<Object> stack1;

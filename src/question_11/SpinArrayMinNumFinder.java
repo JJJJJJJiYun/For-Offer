@@ -2,6 +2,9 @@ package question_11;
 
 public class SpinArrayMinNumFinder {
 
+    /**
+     * 从旋转过一次的数组中找到最小值
+     */
     private static int findMinNumInSpinArray(int[] array) {
         int start = 0, end = array.length - 1;
         while (array[start] >= array[end]) {

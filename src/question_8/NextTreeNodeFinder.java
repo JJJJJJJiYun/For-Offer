@@ -4,6 +4,9 @@ import structure.TreeNodeWithFather;
 
 public class NextTreeNodeFinder {
 
+    /**
+     * 找出中序遍历的下一个节点
+     */
     private static TreeNodeWithFather findNextTreeNode(TreeNodeWithFather root) {
         if (root == null)
             return null;

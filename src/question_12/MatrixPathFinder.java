@@ -2,6 +2,9 @@ package question_12;
 
 public class MatrixPathFinder {
 
+    /**
+     * 判断矩阵是否存在组成字符串的路径
+     */
     private static boolean findPathInMatrix(char[][] array, String str) {
         if (array == null || array.length == 0 || array[0] == null || array[0].length == 0)
             return false;
