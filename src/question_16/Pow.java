@@ -1,5 +1,8 @@
 package question_16;
 
+/**
+ * 实现 pow 函数
+ */
 public class Pow {
 
     private static double pow(double base, int exponent) {

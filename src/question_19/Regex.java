@@ -2,6 +2,9 @@ package question_19;
 
 public class Regex {
 
+    /**
+     * 正则表达式
+     */
     private static boolean match(String str, String pattern) {
         return helper(str, pattern, 0, 0);
     }

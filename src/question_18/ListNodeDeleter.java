@@ -2,6 +2,9 @@ package question_18;
 
 import structure.ListNode;
 
+/**
+ * 删除链表节点
+ */
 public class ListNodeDeleter {
 
     private static ListNode deleteListNode(ListNode head, ListNode target) {

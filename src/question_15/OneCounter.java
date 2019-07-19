@@ -1,5 +1,8 @@
 package question_15;
 
+/**
+ * 找到二进制数中有多少个 1
+ */
 public class OneCounter {
 
     private static int countOne(int num) {
