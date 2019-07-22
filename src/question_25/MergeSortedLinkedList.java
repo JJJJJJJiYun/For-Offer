@@ -4,6 +4,9 @@ import structure.ListNode;
 
 public class MergeSortedLinkedList {
 
+    /**
+     * 合并两个有序链表
+     */
     private static ListNode mergeSortedLinkedList(ListNode head1, ListNode head2) {
         if (head1 == null && head2 == null)
             return null;
