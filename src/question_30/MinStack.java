@@ -2,6 +2,9 @@ package question_30;
 
 import java.util.Stack;
 
+/**
+ * 一个能够以 O(1) 时间复杂度找出最小数字的栈
+ */
 public class MinStack {
 
     private Stack<Integer> elements = new Stack<>();
