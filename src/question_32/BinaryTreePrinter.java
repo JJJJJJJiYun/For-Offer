@@ -4,6 +4,7 @@ import structure.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BinaryTreePrinter {
 
@@ -34,6 +35,36 @@ public class BinaryTreePrinter {
         }
     }
 
+    /**
+     * 之字形打印二叉树
+     */
+    private static void printBinaryTreeZigZag(TreeNode root) {
+        Stack<TreeNode> oddStack = new Stack<>();
+        Stack<TreeNode> evenStack = new Stack<>();
+        oddStack.push(root);
+        int currentLevel = 1;
+        while (!(oddStack.isEmpty() && evenStack.isEmpty())) {
+            Stack<TreeNode> currentStack = currentLevel % 2 != 0 ? oddStack : evenStack;
+            TreeNode current = currentStack.pop();
+            System.out.print(current.value + " ");
+            if (currentLevel % 2 != 0) {
+                if (current.left != null)
+                    evenStack.push(current.left);
+                if (current.right != null)
+                    evenStack.push(current.right);
+            } else {
+                if (current.right != null)
+                    oddStack.push(current.right);
+                if (current.left != null)
+                    oddStack.push(current.left);
+            }
+            if (currentStack.isEmpty()) {
+                System.out.println();
+                currentLevel++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
@@ -51,6 +82,7 @@ public class BinaryTreePrinter {
         node3.right = node7;
         node4.left = node8;
         printBinaryTree(node1);
+        printBinaryTreeZigZag(node1);
     }
 
 }
