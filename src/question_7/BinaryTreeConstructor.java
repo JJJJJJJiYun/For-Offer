@@ -1,5 +1,6 @@
 package question_7;
 
+import question_32.BinaryTreePrinter;
 import structure.TreeNode;
 
 public class BinaryTreeConstructor {
@@ -32,20 +33,11 @@ public class BinaryTreeConstructor {
         return root;
     }
 
-    // 中序遍历递归打印
-    private static void printTree(TreeNode node) {
-        if (node != null) {
-            printTree(node.left);
-            System.out.print(node.value + " ");
-            printTree(node.right);
-        }
-    }
-
     public static void main(String[] args) {
         int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
         int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
         TreeNode root = constructBinaryTree(pre, in);
-        printTree(root);
+        BinaryTreePrinter.printBinaryTree(root);
     }
 
 }

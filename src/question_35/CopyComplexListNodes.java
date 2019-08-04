@@ -4,6 +4,9 @@ import structure.ComplexListNode;
 
 public class CopyComplexListNodes {
 
+    /**
+     * 复制复杂链表
+     */
     private static ComplexListNode copyComplexListNodes(ComplexListNode head) {
         if (head == null)
             return null;

@@ -1,11 +1,10 @@
 package question_33;
 
-import structure.TreeNode;
-
-import java.util.Arrays;
-
 public class PostOrderSequenceOfBinarySearchTreeJudger {
 
+    /**
+     * 判断序列是否为某一二叉搜索树的后续遍历
+     */
     private static boolean isPostOrderSequence(int[] sequence) {
         if (sequence == null || sequence.length == 0)
             return false;

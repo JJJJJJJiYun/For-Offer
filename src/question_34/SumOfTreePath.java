@@ -6,6 +6,11 @@ import java.util.ArrayList;
 
 public class SumOfTreePath {
 
+    /**
+     * 打印从根节点到叶节点之和等于要求数值的路径
+     * @param root
+     * @param sum
+     */
     private static void printSumOfTreePath(TreeNode root, int sum) {
         helper(root, sum, new ArrayList<>(), 0);
     }

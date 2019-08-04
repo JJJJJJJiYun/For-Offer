@@ -11,7 +11,7 @@ public class BinaryTreePrinter {
     /**
      * 换行分层打印二叉树
      */
-    private static void printBinaryTree(TreeNode root) {
+    public static void printBinaryTree(TreeNode root) {
         Queue<TreeNode> helper = new LinkedList<>();
         helper.offer(root);
         int currentLevel = 1, nextLevel = 0;
