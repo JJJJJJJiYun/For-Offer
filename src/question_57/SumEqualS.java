@@ -24,9 +24,40 @@ public class SumEqualS {
         return null;
     }
 
+    /**
+     * 打印和为 s 的连续正数序列
+     */
+    private static void printNumbersSumEqualS(int s) {
+        if (s <= 0)
+            return;
+        if (s < 3)
+            System.out.println(s);
+        int p = 1, q = 2, sum = 3, middle = s / 2 + 1;
+        while (p < q) {
+            if (p > middle)
+                break;
+            if (sum == s) {
+                for (int i = p; i <= q; i++)
+                    System.out.print(i + " ");
+                System.out.println();
+                q++;
+                sum += q;
+            }
+            if (sum < s) {
+                q++;
+                sum += q;
+            }
+            if (sum > s) {
+                sum -= p;
+                p++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] array = {1, 2, 4, 7, 11, 15};
         System.out.println(Arrays.toString(findTwoNumbersSumEqualS(array, 15)));
+        printNumbersSumEqualS(12);
     }
 
 }
