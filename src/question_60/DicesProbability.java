@@ -32,7 +32,7 @@ public class DicesProbability {
     }
 
     public static void main(String[] args) {
-        calculateDicesProbability(11);
+        calculateDicesProbability(4);
     }
 
 }

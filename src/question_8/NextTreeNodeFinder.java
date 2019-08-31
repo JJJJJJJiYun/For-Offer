@@ -11,8 +11,12 @@ public class NextTreeNodeFinder {
         if (root == null)
             return null;
         // 如果存在右子节点，下一个节点一定是右子节点
-        if (root.right != null)
-            return root.right;
+        if (root.right != null) {
+            TreeNodeWithFather temp = root.right;
+            while (temp.left != null)
+                temp = temp.left;
+            return temp;
+        }
         // 如果不存在右子节点，且是父节点的左子节点，下一个节点一定是父节点
         if (root == root.father.left)
             return root.father;
